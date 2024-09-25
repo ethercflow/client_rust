@@ -101,7 +101,7 @@ use std::sync::Arc;
 /// ```
 // TODO: Consider exposing hash algorithm.
 pub struct Family<S, M, C = fn() -> M> {
-    metrics: Arc<RwLock<HashMap<S, M>>>,
+    pub metrics: Arc<RwLock<HashMap<S, M>>>,
     /// Function that when called constructs a new metric.
     ///
     /// For most metric types this would simply be its [`Default`]
